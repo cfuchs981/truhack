@@ -110,6 +110,7 @@
     $sql = "SELECT name, number, teacher, cap, description, type, credits FROM classesHack";
     $result = mysqli_query($conn, $sql);
 
+    #create a course object class and change input from string to objects 
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
             echo $row["name"]. "!" . $row["number"]. "!" . $row["teacher"].
