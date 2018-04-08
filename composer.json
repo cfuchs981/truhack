@@ -1,2 +1,10 @@
 {
+  "name": "truhack",
+  "repository": "https://github.com/cfuchs981/truhack",
+
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
 }
