@@ -44,7 +44,7 @@
 
       <section class="tinder-section p-1 p-lg-5 d-flex d-column" style="width: 100%;">
           <div class="tablehold" id="table">
-             <div class="subheading mb-5">NAME OF CLASS · COURSE NUMBER</div>
+             <div class="subheading mb-5" id="class_number">NAME OF CLASS · COURSE NUMBER</div>
           <p class="mb-5" id="descrip">(picture??)Class description goes here</p>
           <p class="mb-5" id="capteach">Capacity, teacher etc here </p>
           <p class="mb-5" style="font-weight:bold;"id="type">Class type and credits</p>
@@ -75,27 +75,7 @@
 
             </div>
           </div>
-          <!--<table>
-            <tr>
-              <th>Name</th>
-              <th>Number</th>
-              <th>Type</th>
-              <th>Credits</th>
-            </tr>
-            <tr>
-              <td>sample</td>
-              <td>sample</td>
-              <td>sample</td>
-              <td>sample</td>
-            </tr>
-            <tr>
-              <td>sample</td>
-              <td>sample</td>
-              <td>sample</td>
-              <td>sample</td>
-            </tr>
-          </table>-->
-
+ 
           <div class="button-hold">
             <a href="mailto:<?= $_SESSION['email']?>"><button class="email" >Email List</button></a>
           </div>
@@ -108,16 +88,8 @@
 
   </div>
 
-  <!--TODO add table display of selected classes to right wing of page. NOTE: we don't need a printing page. Let's just do an 'email' button or some such that will send the current table values, no need to be extra-->
-  <!--Jacque all your code will go off of the two buttons. One causes the animation (no) one causes add to table (yes). Those
-  two buttons have class names you can select with javascript. The table div is incomplete but you can use the ID 'table' for testing
-  and that will shoot it  to the correct div. Also remember, you'll need to parse the contents of the div that Jon autogenerates.
-  Javascript has 'silent' errors, meaning it rarely tells you when things go wrong. So to avoid most common errors: wrap everything
-  in a window.onload() call. That forces your code to execute only one the site (and thus, PHP) have fully loaded. That'll save you
-  a lotta trash null pointers. -->
 
-
-<div class="hiddens">
+<div class="hiddens" id="sauce">
   <?php
 
     $servername = "mysql.truman.edu";
@@ -138,7 +110,7 @@
         while($row = mysqli_fetch_assoc($result)) {
             echo $row["name"]. "!" . $row["number"]. "!" . $row["teacher"].
                 "!" . $row["cap"]. "!" . $row["description"].
-                "!" . $row["type"]. "!" . $row["credits"]. "<br>";
+                "!" . $row["type"]. "!" . $row["credits"]. "!";
         }
     } else {
         echo "0 results";
@@ -148,8 +120,7 @@
 
   ?>
 
-</div> <!--this is where jon can dump data as discussed if we decide to go through that method. He should auto generate this div himself.-->
-
+</div>
 
 
 
