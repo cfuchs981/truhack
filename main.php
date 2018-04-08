@@ -36,6 +36,10 @@
           <li class="nav-item name"> <?= $_SESSION['fullname'] ?></li>
           <li class="nav-item major"><?= $_SESSION['major'] . " : " .  $_SESSION['minor'] ?></li>
           <li class="nav-item grad"><?php echo "Graduation Date: " .  $_SESSION['datee'] ?></li>
+          <li class="nav-item" style="font-size:10px;padding-top:10px;">Enter (lower bound) credits per course:</li>
+          <li class="nav-item"><input id="amount" type="number" value="0" /></li>
+          <li class="nav-item" style="font-size:10px;padding-top:10px;">Enter (upper bound) credits per course:</li>
+          <li class="nav-item"><input id="amount2" type="number" value="0" /></li>
         </ul>
       </div>
     </nav>
