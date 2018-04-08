@@ -45,7 +45,7 @@
       <section class="tinder-section p-1 p-lg-5 d-flex d-column" style="width: 100%;">
           <div class="tablehold" id="table">
              <div class="subheading mb-5" id="class_number">NAME OF CLASS · COURSE NUMBER</div>
-          <p class="mb-5" id="descrip">(picture??)Class description goes here</p>
+          <p class="mb-5" id="descrip" style="font-size:12px;">(picture??)Class description goes here</p>
           <p class="mb-5" id="capteach">Capacity, teacher etc here </p>
           <p class="mb-5" style="font-weight:bold;"id="type">Class type and credits</p>
           <div class="button-hold">
@@ -60,17 +60,17 @@
           <div class="subheading mb-5">COURSE SELECTIONS</div>
 
           <div class="datahold">
-            <textarea class="wew" name="choices" rows='8' cols='48'></textarea>
+            <textarea class="wew" id="wew" name="choices" rows='8' cols='48'></textarea>
             <div class="grades">A Credits Remaining:
-              <span class="A"><?= $_SESSION['A']?></span><br/>
+              <span id="A"><?= $_SESSION['A']?></span><br/>
               B Credits Remaining:
-              <span class="B"><?= $_SESSION['B']?></span><br/>
+              <span id="B"><?= $_SESSION['B']?></span><br/>
               C Credits Remaining:
-              <span class="C"><?= $_SESSION['C']?></span><br/>
+              <span id="C"><?= $_SESSION['C']?></span><br/>
               G Credits Remaining:
-              <span class="G"><?= $_SESSION['G']?></span><br/>
+              <span id="G"><?= $_SESSION['G']?></span><br/>
               S Credits Remaining:
-              <span class="S"><?= $_SESSION['S']?></span><br/>
+              <span id="S"><?= $_SESSION['S']?></span><br/>
 
 
             </div>
